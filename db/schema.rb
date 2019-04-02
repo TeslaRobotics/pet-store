@@ -12,13 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_04_02_222836) do
 
-  create_table "owners", force: :cascade do |t|
-    t.string "name"
-    t.date "birthday"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "pets", force: :cascade do |t|
     t.string "name"
     t.text "description"
