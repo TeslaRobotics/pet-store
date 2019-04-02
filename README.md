@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Independent tables
 
-Things you may want to cover:
+rails g model Owner name:string birthday:date
+rails g model Service description:text price:float
+rails g model Pet name:string description:text age:integer owner:references
+rails db:migrate
 
-* Ruby version
+# Dependent tables
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails g model Ticket service:references pet:references
+rails db:migrate
