@@ -11,3 +11,7 @@ rails db:migrate
 rails g model Pet name:string description:text age:integer owner:references
 rails g model Ticket service:references pet:references
 rails db:migrate
+
+# Add welcome page
+
+rails generate controller Welcome index
