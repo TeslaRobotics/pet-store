@@ -1,4 +1,5 @@
 class Owner < ApplicationRecord
+  has_many :pets
   validates :birthday, presence: true
   validate :validate_age
 
