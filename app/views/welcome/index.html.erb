@@ -1,4 +1,19 @@
-<h1>Welcome#index</h1>
-<% Ticket.all.each do |ticket| %>
-  <%= ticket.service %>
-<% end %>
+<h1>Welcome to my Pet Store</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>serial number</th>
+    <th>service</th>
+    <th>pet name</th>
+    <th>service date</th>
+  </tr>
+
+  <% Ticket.all.each do |ticket| %>
+  <tr>
+    <td><%= ticket.id %></td>
+    <td><%= ticket.service.description %></td>
+    <td><%= ticket.pet.name %></td>
+    <td><%= ticket.service.created_at.to_date %></td>
+  </tr>
+  <% end %>
+</table>
